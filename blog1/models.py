@@ -8,12 +8,9 @@ class Post(models.Model):
     slug=models.CharField(max_length=130)
     author=models.CharField(max_length=13)
     timestamp=models.DateTimeField(blank=True)
-    likes = models.ManyToManyField(User, related_name='likes', blank=True)
 
     def __str__(self):
         return self.title + 'by' + ' ' + self.author
-    def total_likes(self):
-        return self.likes.count()
 
 
 
