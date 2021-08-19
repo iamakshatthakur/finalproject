@@ -84,30 +84,6 @@
     integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
     crossorigin="anonymous"></script>
 
-    <script type="text/javascript">
-      $(document).ready(function(event){
-                      $(document).on('click', '#like', function(event){
-                          event.preventDefault();
-                          var pk = $(this).attr('value');
-                          $.ajax({
-                              type: 'POST',
-                              url: '{% url "blog1:like_post" %}',
-                              data: {
-                                  'id': pk,
-                                  'csrfmiddlewaretoken': '{{ csrf_token }}'
-                              },
-                              datatype: 'json',
-                              success: function(response){
-                                  $('#like-section').html(response['form'])
-      
-                              },
-                              error: function(rs, e){
-                                  console.log(rs.responseText);
-                              },
-                          });
-                      });
-                  });
-      </script>
 
 </body>
 </html>
