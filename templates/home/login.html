@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Login {% endblock title%}
+{% block content %}
+{% block mycss %}
+<style>
+	
+	body{
+		background-color: rgb(159, 217, 255);
+	}
+</style>
+{% endblock mycss %}
+<body>
+<center>
+	<h1 id="login">LOGIN</h1>
+		<br><br><br>
+	
+					<table id="table" border="0" height="30%" width="20%">
+					<tr>
+					<th>First Name:-</th>
+					<th align="left"><input type="text" name="t1" value="" placeholder="first name"></th>
+					</tr>
+					<tr>
+					<th>Contact No:-</th>
+					<th align="left"><input type="number" name="t3" value="" placeholder="contact no"></th>
+					</tr>
+					<tr>
+					<th>Email Id:-</th>
+					<th align="left"><input type="email" name="t4" value="" placeholder="email id"></th>
+					</tr>
+					<tr>
+					<th>Password:-</th>
+					<th align="left"><input type="passowrd" name="t5" value="" placeholder="password">
+					</th>
+					</tr>
+					<tr>
+					<th>Confirm Password:-</th>
+					<th align="left"><input type="password" name="t5" value="" placeholder="confirm password"></th>
+					</tr>
+					<tr>
+					<th colspan="2"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" name="t7" value="Login"></th>
+					<tr>
+					</table>
+				
+	</center>
+{% endblock content %}
+</body>
+</html>

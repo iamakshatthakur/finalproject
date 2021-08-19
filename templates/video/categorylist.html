@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title  %} about us {% endblock title %}
+{% block mycss %}
+    <style>
+    img{ 
+        height:200px;
+        width:200px;
+    }
+    </style>
+{% endblock mycss %}
+{% block content %}
+<div class ="container">
+    <div class="row">
+    {% for c in categories %}
+    <div class = "col_lg col_3">
+    <h5><a href="{% url 'video:category_view' c.slug %}">{{c.name}}</a></h5>
+    <img src="{{c.img.url}}"alt="img">
+    </div>
+    {% endfor %}
+</div>
+        {% endblock content %}

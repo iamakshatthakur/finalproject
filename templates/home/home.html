@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Home {% endblock title%}
+{% block content %}
+{% block mycss %}
+
+<style>
+	body{
+    background-color: rgb(159, 217, 255);	
+	}
+</style>
+{% endblock mycss %}
+<center><h1 id="home">Welcome to my page</h1></center>
+<div class="card">
+  <div class="card-body">
+    <div class="row py-3">
+      <div class="col-md-12">
+        <div class="card card-body">
+          <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="{% static 'images/5.jpg' %}" height="1100" width="1900"  class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="{% static 'images/4.jpg' %}" height="1100" width="1900" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="{% static 'images/3.jpg' %}" height="1100" width="1900" class="d-block w-100" alt="...">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br><br>
+<center>
+<h1>
+  This is my blog page about nature
+</h1><br><br>
+<table border="1" height="100%" width="100%" cellpadding="100%" cellspacing="20">
+  <tr>
+    <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{% static 'images/1.jpg' %}", height="700" width="500"/></th>
+    <th><img src="{% static 'images/3.jpg' %}", height="500" width="500"/></th>
+    <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{% static 'images/2.jpg' %}", height="700" width="500"/></th>
+  </tr>
+  <tr>
+    <th>This is the beautiful waterfall in bali. It has been said that it is 1200 yeras old and who ever come here and bath in the water tht person open a way for him to go heaven after he dies. Strange beliefs! isn't it?</th>
+    <th>                                                                                 </th>
+    <th>Amzon forest- known as the lungs of earth.This picture above is showing burning of amazon forest. it is the home of many species some has lost there home and some animals lost thier life in this fire.Is this we are returning our nature in return of everthing we get?</th>
+  </tr>
+</table>
+</center>
+	
+{% endblock content %}

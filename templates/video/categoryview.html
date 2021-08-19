@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title  %} about us {% endblock title %}
+{% block content %}
+<div class ="container">
+    <div class="row">
+         <h2>{{categoryview.name}}</h2>
+         {% for ar in article %}
+         <div class = "col col-md-3"
+             <h3>{{ar.title}}</h3>>
+             <img src="{{ar.img.url}}" alt="modimage">
+            <h4><a href="{% url 'video:article_detail' ar.slug %}">
+            show me details</a></h4>
+         {% endfor %} 
+        </div>
+    </div>
+</div>
+        {% endblock content %}
